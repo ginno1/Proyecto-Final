@@ -1,34 +1,420 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Que Ganga - Zapatilleria</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <title>Ubicación y Contacto - Que Ganga Zapatería</title>
+    
+    <meta name="description" content="Visitanos en Que Ganga, Colón, Entre Ríos. Horarios, dirección, teléfono y mapa interactivo para llegar fácilmente a nuestra zapatería.">
+    <meta name="keywords" content="ubicación Que Ganga, dirección zapatería, Colón Entre Ríos, contacto, horarios">
+    <meta name="author" content="Que Ganga">
+    
+    
+    <meta property="og:title" content="Ubicación - Que Ganga Zapatería">
+    <meta property="og:description" content="Encontranos en San José, Entre Ríos. Mapa, horarios y datos de contacto">
+    <meta property="og:image" content="../img/logo que ganga.png">
+    <meta property="og:type" content="website">
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <header>
-        <a href="">
-            <img class="logo" src="../img/logo que ganga.png" alt="Logo de Que Ganga">
-        </a>
-
-        <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="hombres.html">Hombres</a></li>
-            <li><a href="mujeres.html">Mujeres</a></li>
-            <li><a href="tablatalles.html">Tabla de Talles</a></li>
-            <li><a href="ubicacion.html">Ubicacion</a></li>
-        </ul>
+    
+    <header class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img class="logo" src="../img/logo que ganga.png" alt="Logo Que Ganga - Zapatería">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hombres.html">Hombres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mujeres.html">Mujeres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tablatalles.html">Tabla de Talles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ubicacion.html" aria-current="page">Ubicación</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <h1>Que Ganga</h1>
+    
+    <main class="container my-5">
+        <h1 class="text-center mb-5 fade-in-up">¿Dónde Estamos?</h1>
+        
+        
+        <section class="row mb-5">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 hover-shadow loading">
+                    <div class="card-body text-center">
+                        <div class="display-4 mb-3">📍</div>
+                        <h4>Dirección</h4>
+                        <p>Centenario y Lavalle<br>San José, Entre Ríos<br>Argentina (CP: 3283)</p>
+                        <button class="btn btn-outline-primary" onclick="abrirMapa()">Ver en Mapa</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 hover-shadow loading">
+                    <div class="card-body text-center">
+                        <div class="display-4 mb-3">📞</div>
+                        <h4>Teléfono</h4>
+                        <p>+54 343 123 4567</p>
+                        <p>WhatsApp disponible</p>
+                        <button class="btn btn-outline-success" onclick="llamarTelefono()">Llamar Ahora</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card h-100 hover-shadow loading">
+                    <div class="card-body text-center">
+                        <div class="display-4 mb-3">🕒</div>
+                        <h4>Horarios de Atención</h4>
+                        <div class="text-start">
+                            <p><strong>Lunes a Viernes:</strong> 9:00 a 12:00 y 16:00 a 20:00</p>
+                            <p><strong>Sábados:</strong> 8:30 a 12:30 y 16:00 a 20:00</p>
+                            <p><strong>Domingos:</strong> Cerrado</p>
+                            <p><strong>Feriados:</strong> Cerrado</p>
+                        </div>
+                        <div class="mt-2">
+                            <span class="badge bg-success" id="estadoLocal">Abierto</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h2>Donde estamos?</h2>
-        <h3>Te dejamos un mapa para encontrarnos.</h3>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d843.9362727985977!2d-58.219383431630725!3d-32.211098748339055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ae2d07c8ddb3c9%3A0xda776a855edd07a7!2sZapateria%20Que%20Ganga!5e0!3m2!1ses!2sar!4v1757691261912!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <section class="row mb-5">
+            <div class="col-12">
+                <div class="card hover-shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="text-center mb-0">🗺️ Te dejamos un mapa para encontrarnos fácilmente</h3>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="ratio ratio-16x9">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d843.9362727985977!2d-58.219383431630725!3d-32.211098748339055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ae2d07c8ddb3c9%3A0xda776a855edd07a7!2sZapateria%20Que%20Ganga!5e0!3m2!1ses!2sar!4v1757691261912!5m2!1ses!2sar" 
+                                style="border:0; border-radius: 0 0 10px 10px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Ubicación de Que Ganga Zapatería en San José, Entre Ríos">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="row mb-5">
+            <div class="col-12">
+                <div class="card hover-shadow">
+                    <div class="card-body">
+                        <h3 class="text-center mb-4">🚗 ¿Cómo llegar a Que Ganga?</h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h4>🚌 En Transporte Público</h4>
+                                <ul>
+                                    <li><strong>En colectivo.</strong></li>
+                                    <li><strong>Parada más cercana:</strong> "Terminal de San José, Entre Rios."</li>
+                                    <li><strong>Distancia a pie desde la terminal hasta el local:</strong> 2 cuadras (3 minutos)</li>
+                                </ul>
+                                
+                                <h4>🚗 En Auto Particular</h4>
+                                <ul>
+                                    <li>Desde Ruta Nacional 14: tomar acceso Dr.Bastian.</li>
+                                    <li>Seguir por Acceso Dr. Bastian hasta calle Centenario.</li>
+                                    <li>Estacionamiento disponible en la cuadra.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <h4>🏪 Referencias del Local</h4>
+                                <ul>
+                                    <li>Frente a local Belthom.</li>
+                                    <li>A dos cuadras del Banco.</li>
+                                    <li>Al lado de la tombola del pueblo.</li>
+                                    <li>Vidrieras amplias con productos visibles</li>
+                                </ul>
+                                
+                                <div class="alert alert-info mt-3">
+                                    <strong>💡 Tip:</strong> Si vienes desde otra ciudad, el local está ubicado en pleno centro histórico de San José, cerca de todos los puntos turísticos principales.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="row mb-5">
+            <div class="col-12">
+                <div class="card hover-shadow">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="text-center mb-0">✉️ Contactanos</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <h4>Envianos tu consulta</h4>
+                                <form id="contactForm">
+                                    <div class="mb-3">
+                                        <label for="nombre" class="form-label">Nombre completo *</label>
+                                        <input type="text" class="form-control" id="nombre" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="telefono" class="form-label">Teléfono *</label>
+                                        <input type="tel" class="form-control" id="telefono" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="consulta" class="form-label">Consulta *</label>
+                                        <textarea class="form-control" id="consulta" rows="4" required placeholder="Escribe tu consulta sobre productos, talles, disponibilidad, etc."></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-success w-100">Enviar Consulta</button>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Otras formas de contacto</h4>
+                                <div class="d-grid gap-3">
+                                    <button class="btn btn-outline-success btn-lg" onclick="abrirWhatsApp()">
+                                        📱 WhatsApp: +54 343 123 4567
+                                    </button>
+                                    <button class="btn btn-outline-primary btn-lg" onclick="abrirFacebook()">
+                                        📘 Facebook: @Zapatería Que Ganga
+                                    </button>
+                                    <button class="btn btn-outline-danger btn-lg" onclick="abrirInstagram()">
+                                        📷 Instagram: @queganga_
+                                    </button>
+                                    <button class="btn btn-outline-info btn-lg" onclick="enviarEmail()">
+                                        ✉️ Email: info@queganga.com.ar
+                                    </button>
+                                </div>
+                                
+                                <div class="mt-4 p-3 bg-light rounded">
+                                    <h5>⏰ Tiempos de Respuesta</h5>
+                                    <ul class="mb-0">
+                                        <li><strong>WhatsApp:</strong> Inmediato (horario comercial)</li>
+                                        <li><strong>Email:</strong> Dentro de 24 horas</li>
+                                        <li><strong>Redes Sociales:</strong> Dentro de 2-4 horas</li>
+                                        <li><strong>Teléfono:</strong> Inmediato (horario comercial)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="row">
+            <div class="col-12">
+                <div class="card hover-shadow">
+                    <div class="card-body">
+                        <h3 class="text-center mb-4">🎯 Servicios Especiales</h3>
+                        <div class="row">
+                            <div class="col-md-3 text-center mb-3">
+                                <div class="display-6 mb-2">🚚</div>
+                                <h5>Delivery Gratuito</h5>
+                                <p>En compras superiores a $50.000 dentro de San José</p>
+                            </div>
+                            <div class="col-md-3 text-center mb-3">
+                                <div class="display-6 mb-2">🔄</div>
+                                <h5>Cambios Sin Cargo</h5>
+                                <p>15 días para cambios por talle o modelo</p>
+                            </div>
+                            <div class="col-md-3 text-center mb-3">
+                                <div class="display-6 mb-2">💳</div>
+                                <h5>Múltiples Pagos</h5>
+                                <p>Efectivo, tarjetas y financiación disponible</p>
+                            </div>
+                            <div class="col-md-3 text-center mb-3">
+                                <div class="display-6 mb-2">👥</div>
+                                <h5>Asesoramiento</h5>
+                                <p>Personal especializado para ayudarte</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-   
+    
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5>Que Ganga</h5>
+                    <p>Tu zapatería de confianza en San José, Entre Ríos. Más de 15 años brindando calzado de calidad para toda la familia.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white hover-scale" aria-label="Facebook">📘</a>
+                        <a href="#" class="text-white hover-scale" aria-label="Instagram">📷</a>
+                        <a href="#" class="text-white hover-scale" aria-label="WhatsApp">📱</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Contacto</h5>
+                    <p>📍 Centenario y Lavalle, San José, Entre Ríos, Argentina</p>
+                    <p>📞 +54 343 123 4567</p>
+                    <p>✉️ info@queganga.com.ar</p>
+                    <p>🕒 Lun a Sáb: 8:30 a 12:30 y 16:00 a 20:00 | Dom: Cerrado</p>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5>Navegación</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="../index.html" class="text-white-50 text-decoration-none">Inicio</a></li>
+                                <li><a href="hombres.html" class="text-white-50 text-decoration-none">Hombres</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li><a href="mujeres.html" class="text-white-50 text-decoration-none">Mujeres</a></li>
+                                <li><a href="tablatalles.html" class="text-white-50 text-decoration-none">Tabla de Talles</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Que Ganga. Todos los derechos reservados.</p>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    
+    <script>
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.loading').forEach(el => {
+            observer.observe(el);
+        });
+
+       
+        function verificarHorario() {
+            const ahora = new Date();
+            const dia = ahora.getDay(); 
+            const hora = ahora.getHours();
+            const minuto = ahora.getMinutes();
+            const horaActual = hora + minuto / 60;
+            
+            const estadoLocal = document.getElementById('estadoLocal');
+            let abierto = false;
+            
+            if (dia >= 1 && dia <= 6) { 
+                abierto = (horaActual >= 9 && horaActual < 19);
+            } else if (dia === 0) { 
+                abierto = (horaActual >= 9 && horaActual < 13);
+            }
+            
+            if (abierto) {
+                estadoLocal.textContent = 'Abierto Ahora';
+                estadoLocal.className = 'badge bg-success pulse-animation';
+            } else {
+                estadoLocal.textContent = 'Cerrado';
+                estadoLocal.className = 'badge bg-danger';
+            }
+        }
+
+        
+        function abrirMapa() {
+            window.open('https://goo.gl/maps/ejemplo', '_blank');
+        }
+
+        function llamarTelefono() {
+            window.location.href = 'tel:+5434312345467';
+        }
+
+        function abrirWhatsApp() {
+            const mensaje = encodeURIComponent('Hola! Me interesa consultar sobre productos en Que Ganga.');
+            window.open(`https://wa.me/5434312345467?text=${mensaje}`, '_blank');
+        }
+
+        function abrirFacebook() {
+            window.open('https://facebook.com/ZapateríaQueGanga', '_blank');
+        }
+
+        function abrirInstagram() {
+            window.open('https://instagram.com/queganga_', '_blank');
+        }
+
+        function enviarEmail() {
+            const asunto = encodeURIComponent('Consulta desde sitio web');
+            const mensaje = encodeURIComponent('Hola! Me gustaría hacer una consulta sobre sus productos.');
+            window.location.href = `mailto:info@queganga.com.ar?subject=${asunto}&body=${mensaje}`;
+        }
+
+        
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const telefono = document.getElementById('telefono').value;
+            const email = document.getElementById('email').value;
+            const consulta = document.getElementById('consulta').value;
+            
+            
+            const btn = this.querySelector('button[type="submit"]');
+            const textoOriginal = btn.innerHTML;
+            
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert(`¡Gracias ${nombre}! Tu consulta ha sido enviada. Te contactaremos pronto al ${telefono}.`);
+                this.reset();
+                btn.innerHTML = textoOriginal;
+                btn.disabled = false;
+            }, 2000);
+        });
+
+        
+        verificarHorario();
+        setInterval(verificarHorario, 60000); 
+    </script>
 </body>
 </html>
